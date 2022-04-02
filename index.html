@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="image/icon.png" />
+
+    <!-- dark theme for swal -->
+    <!-- <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet"> -->
+    <!-- Include the Dark theme -->
+    <!-- <link rel="stylesheet" href="@sweetalert2/theme-dark/dark.css">
+
+<script src="sweetalert2/dist/sweetalert2.min.js"></script> -->
+    <!-- javascript file  -->
+    <script src="app.js"></script>
+
+    <!-- swal link -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+    <title>Id's Generator</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1>GENERATE SOME ID's</h1>
+
+      <div class="hero">
+        <form name="form_main">
+          <label for="numero"></label>
+          <!-- alterar dps -->
+          <h2>Generated Identification</h2>
+          <div class="final-result">
+            <input
+              type="text"
+              name="numero"
+              id="numero"
+              disabled
+              title="click the 'READY' button to start"
+            />
+            <button id="copy" type="submit" onclick="copyButton()">
+              <i class="fas fa-copy"></i>
+            </button>
+          </div>
+
+          <br />
+          <div class="fields">
+            <input
+              type="radio"
+              name="tipo"
+              value="cpf"
+              id="cpf"
+              checked="checked"
+            />
+            <label for="Cpf">CPF</label>
+            <input type="radio" name="tipo" value="cnpj" id="cnpj" />
+            <label for="Cnpj">CNPJ</label>
+            <!-- <br> -->
+            <input type="radio" name="tipo" value="rg" id="rg" />
+            <label for="Rg">RG</label>
+          </div>
+
+          <br />
+          <br />
+
+          <input
+            class="button"
+            id="buttonGerar"
+            type="button"
+            value="READY"
+            onclick="gerar()"
+          />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
