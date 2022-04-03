@@ -88,8 +88,8 @@ body {
   cursor: pointer;
 }
 input[type="radio"]:after {
-  width: 11px;
-  height: 11px;
+  width: 13px;
+  height: 13px;
   border-radius: 15px;
   position: relative;
   background-color: var(--primary-color);
@@ -99,8 +99,8 @@ input[type="radio"]:after {
   border: 2px solid var(--default-white);
 }
 input[type="radio"]:checked:after {
-  width: 11px;
-  height: 11px;
+  width: 13px;
+  height: 13px;
   border-radius: 15px;
   position: relative;
   background-color: var(--radio-color);
