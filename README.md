@@ -1,6 +1,6 @@
 ## Generat[ID] 📖
 
-The **[Generat[ID]](https://bumboobee.github.io/Ids-generator/)** is a simple and effect id's generator.
+The **[Generat[ID]](https://bumboobee.github.io/ids-generator/)** is a simple and effect id's generator.
 
 There you can find three types of Id's **[CPF, CNPJ and RG]** that you can **[generated]()** from a **random way.** 
 
@@ -18,11 +18,11 @@ In Brazil, there are **many documents required** to be a legal person and legal 
 
 ## Take a look 
 
- **The final result you can see [➡here⬅](https://bumboobee.github.io/Ids-generator/)**
+ **The final result you can see [➡here⬅](https://bumboobee.github.io/ids-generator/)**
  
 <div align="center">
 
-[![tumblr_m6rsylpvkg1rziwwco1_500](https://user-images.githubusercontent.com/94147847/161428999-7ca8ae8e-fab0-4387-aec2-d9569dc3c833.gif)](https://bumboobee.github.io/Ids-generator/)
+[![tumblr_m6rsylpvkg1rziwwco1_500](https://user-images.githubusercontent.com/94147847/161428999-7ca8ae8e-fab0-4387-aec2-d9569dc3c833.gif)](https://bumboobee.github.io/ids-generator/)
 
  > Before you marry a person, you should first make them use a computer with slow Internet to see who they really are.
  >> **Will Ferrell**
