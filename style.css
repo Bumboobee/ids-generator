@@ -2,70 +2,51 @@
 
 :root {
   --default-white: #fff;
-  --default-black: #000;
-  --primary-color: #98a799;
+  --default-black: #312f2f;
   --secondary-color: #4b4b49;
-  --strong-color: #10587a;
-  --hover-color: #598392;
-  --clean-color: #696464;
-  --button-color: #a4c2a5;
-  --hover-copy: #444242;
-  --radio-color: #111e93;
+  --black-color: #000000;
+  --grey-01: #bfbbbb;
+  --grey-00: #828282;
 }
-.swal2-html-container,
-.swal2-title {
-  color: var(--default-white) !important;
-}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Red Hat Mono", sans serif;
 }
+
 body {
   text-align: center;
   display: flex;
   justify-content: center;
   align-content: center;
 }
+
 .main h1 {
   margin: 25px;
   text-align: center;
   display: flex;
 }
+
 .hero {
   background-color: var(--strong-color);
   border-radius: 5px;
-  box-shadow: 0 0 2em var(--secondary-color);
+  box-shadow: 0 0 .5em var(--secondary-color);
   margin-top: 40px;
   max-width: 450px;
   height: 250px;
   padding: 20px;
+  border: 1px solid var(--black-color);
 }
-.final-result button {
-  text-align: center;
-  max-width: 200px;
-  padding: 6px;
-  border-radius: 5px;
-  background-color: var(--secondary-color);
-  border: 0.00001px solid var(--clean-color);
-  outline: none;
+
+.final-result {
+  height: 60px;
+  display: flex;
+  justify-content: center;
   cursor: pointer;
-  transition: 0.2s ease-in;
-  opacity: 1;
-  color: var(--primary-color);
 }
-.final-result button:hover i {
-  transition: 0.2s ease;
-  opacity: 0.4;
-}
-.final-result button:hover {
-  border: 0.00001px solid var(--hover-copy);
-}
-.final-result button i {
-  font-size: 1.2rem;
-  transition: 0.2s ease;
-}
+
 #numero {
   margin-top: 20px;
   max-width: 200px;
@@ -75,40 +56,36 @@ body {
   text-align: center;
   border-radius: 5px;
   outline: none;
-  border: none;
-  color: var(--default-black);
+  border: 1px solid var(--black-color);
+  color: var(--black-color);
 }
+
 .fields {
-  margin-top: 10px;
   font-weight: 900;
   font-family: "Courier New", Courier, monospace;
   color: var(--default-black);
 }
+
 .fields input {
   cursor: pointer;
 }
+
 input[type="radio"]:after {
   width: 13px;
   height: 13px;
   border-radius: 15px;
   position: relative;
-  background-color: var(--primary-color);
+  background-color: var(--grey-00);
   content: "";
   display: inline-block;
   visibility: visible;
-  border: 2px solid var(--default-white);
+  border: 2px solid var(--grey-01);
 }
+
 input[type="radio"]:checked:after {
-  width: 13px;
-  height: 13px;
-  border-radius: 15px;
-  position: relative;
-  background-color: var(--radio-color);
-  content: "";
-  display: inline-block;
-  visibility: visible;
-  border: 2px solid var(--default-white);
+  background-color: var(--black-color);
 }
+
 .button {
   font-family: "Arimo";
   font-weight: 600;
@@ -116,18 +93,19 @@ input[type="radio"]:checked:after {
   height: 32px;
   border-radius: 5px;
   outline: none;
-  border: 0.00001px solid var(--strong-color);
   cursor: pointer;
   transition: 0.2s;
-  color: var(--default-black);
-  background-color: var(--button-color);
-}
-.button:hover {
-  background-color: var(--hover-color);
-  transition: 0.2s;
   color: var(--default-white);
+  background-color: var(--black-color);
+}
+
+.button:hover {
+  background-color: var(--default-white);
+  transition: 0.2s;
+  color: var(--black-color);
   font-weight: 600;
 }
+
 @media (max-width: 480px) {
   .hero {
     display: flex;
@@ -135,42 +113,4 @@ input[type="radio"]:checked:after {
     max-width: 320px;
     height: 290px;
   }
-}
-[data-title]:hover:after {
-  opacity: 1;
-  transition: all 0.1s ease 0.5s;
-  visibility: visible;
-}
-[data-title]:after {
-  content: attr(data-title);
-  position: absolute;
-  bottom: -1.6em;
-  left: 100%;
-  padding: 4px 4px 4px 8px;
-  color: #222;
-  white-space: nowrap;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  -moz-box-shadow: 0px 0px 4px #222;
-  -webkit-box-shadow: 0px 0px 4px #222;
-  box-shadow: 0px 0px 4px #222;
-  background-image: -moz-linear-gradient(top, #f8f8f8, #cccccc);
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0, #f8f8f8),
-    color-stop(1, #cccccc)
-  );
-  background-image: -webkit-linear-gradient(top, #f8f8f8, #cccccc);
-  background-image: -moz-linear-gradient(top, #f8f8f8, #cccccc);
-  background-image: -ms-linear-gradient(top, #f8f8f8, #cccccc);
-  background-image: -o-linear-gradient(top, #f8f8f8, #cccccc);
-  opacity: 0;
-  z-index: 99999;
-  visibility: hidden;
-}
-[data-title] {
-  position: relative;
 }

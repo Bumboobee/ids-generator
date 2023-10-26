@@ -1,8 +1,6 @@
-let create_array = (total, numero) =>
-  Array.from(Array(total), () => number_random(numero));
+let create_array = (total, numero) => Array.from(Array(total), () => number_random(numero));
 let number_random = (number) => Math.round(Math.random() * number);
-let mod = (dividendo, divisor) =>
-  Math.round(dividendo - Math.floor(dividendo / divisor) * divisor);
+let mod = (dividendo, divisor) => Math.round(dividendo - Math.floor(dividendo / divisor) * divisor);
 
 function cpf() {
   let total_array = 9;
@@ -116,39 +114,42 @@ function gerar() {
 
   document.form_main.numero.value = value;
 }
-//copy button
-function copyButton() {
-  /*get the text field */
-  var copyText = document.getElementById("numero");
-  //see if try to copy with the empty input
-  if (document.getElementById("numero").value == "") {
-    Swal.fire({
-      title: "Ooops...",
-      html: "Nothing to copy here!",
-      icon: "error",
-      background: "#01161E",
-      confirmButtonColor: "#124559",
-    });
 
-    event.preventDefault();
+function clickElement() {
+  var idGeneratedElement = document.getElementById("numero");
+
+  copyResult(idGeneratedElement)
+}
+
+function copyResult(idGeneratedElement) {
+  
+  event.preventDefault();
+  if (idGeneratedElement.value == "") {
+    Toastify({
+      text: "Nenhum valor gerado!",
+      className: "info",
+      style: {
+        color: "var(--default-white)",
+        border: "1px solid var(--black-color)",
+        background: "var(--black-color)",
+      }
+    }).showToast();
   } else {
-    copyText.select();
-    copyText.setSelectionRange(0, 99999); /*for mobile devices */
+    idGeneratedElement.select();
+    idGeneratedElement.setSelectionRange(0, 99999);
 
-    /*copy the text inside the text field */
-    navigator.clipboard.writeText(copyText.value);
-
-    let timerInterval;
-    Swal.fire({
-      title: "Copied!",
-      html: "Id copied with success!!",
-      icon: "success",
-      background: "#01161E",
-      timer: 1200,
-      showConfirmButton: false,
-      timerProgressBar: false,
-    });
-    // prevent that the input be reloaded
-    event.preventDefault();
+    navigator.clipboard.writeText(idGeneratedElement.value);
+    
+    Toastify({
+      text: "Copiado para a área de transferência!",
+      className: "info",
+      style: {
+        color: "var(--default-white)",
+        border: "1px solid var(--black-color)",
+        background: "var(--black-color)",
+      }
+    }).showToast();
   }
 }
+
+clickElement();
